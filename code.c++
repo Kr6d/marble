@@ -35,12 +35,12 @@ task main() {
 		if (buttonPress == true && debounce == false) { // Machine starts on button press
 			debounce = true; // Debounce necessary, else loop repeats instantaneously
 			startMotor(myMotor, 15);
-			wait(0.52);
+			wait(0.535);
 			stopMotor(myMotor);
 			wait(2.1); // Allow sensor 2.1 seconds to sense marble
 			sort();
 			SensorValue(solanoid) = 1;
-			wait(0.5);
+			wait(0.3);
 			SensorValue(solanoid) = 0;
 			SensorValue(line) = 0;
 			debounce = false;
